@@ -1,3 +1,4 @@
+<<<<<<< HEAD 
 <!DOCTYPE html>
 
 
@@ -592,3 +593,7 @@
 </body>
  
 </html>
+=======
+Cheers,
+Prabhat Nepal.
+>>>>>>> 10c8709301eaa5683c1f920e16e6ca2be47230c7
