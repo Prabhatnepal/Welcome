@@ -1,0 +1,71 @@
+
+
+body{
+    background-color: aqua;
+    
+}
+
+.one {
+
+    color: blue;
+    
+}
+.xxx{
+
+    background-image: url();
+}
+.about{
+
+
+padding-bottom: 5px;
+padding-top: 25px;
+    color: white;
+}
+
+.xxx video{
+
+    position: absolute;
+    top: 0.5;
+    left: 0.5;
+    width: 99%;
+    height: 56%;
+    object-fit: cover;
+    opacity: 0.8;
+
+}
+
+.about{
+
+position:relative;
+z-index: 10;
+
+
+}
+
+.profile{
+
+
+    background-image: url(./img\ 2.jpg);
+    
+}
+
+.h11{
+text-align: center;
+    width: 0ch;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: text 6s steps(30) infinite alternate-reverse;
+
+    
+}@keyframes text{
+
+    0%{
+        width: 0ch;
+    }
+    50%{
+        width:54ch;
+
+    }
+}
+
+.head
