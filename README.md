@@ -1,7 +1,6 @@
-
-
+<!DOCTYPE html>
 <html lang="en">
- 
+ <div class="prabhat">
 <head>
     
     <meta charset="UTF-8">
@@ -135,7 +134,7 @@
 
     This website is basically one of my
     Web Development project which is
-    built using HTML only.
+    built using HTML and CSS.
     Here one can also find ideas for
     projects in different languages.
 
@@ -586,12 +585,6 @@
     <!--Footer2(end)-->
  
 </body>
+</div>
  
 </html>
-=======
-Cheers,
-Prabhat Nepal.
->>>>>>> 10c8709301eaa5683c1f920e16e6ca2be47230c7
-=======
-# prabhatnepal.com.np
->>>>>>> parent of 10c8709 (Update README.md)
