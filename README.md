@@ -33,7 +33,7 @@
                         <td>
                             <font face="Comic sans MS" size="6">
                                 <img src="./logo.jpg" alt="logo" width="40" height="40">
-                                <b>PRABHAT NEPAL</b>
+                                <b>PRABHANEPAL</b>
                             </font>
                         </td>
  

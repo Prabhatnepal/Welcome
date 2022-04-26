@@ -2,17 +2,21 @@
 
 body{
     background-color: aqua;
+    display: flex;
     
 }
 
 .one {
 
     color: blue;
+    display: flex;
     
 }
 .xxx{
 
     background-image: url();
+    display: flex;
+    
 }
 .about{
 
@@ -20,6 +24,9 @@ body{
 padding-bottom: 5px;
 padding-top: 25px;
     color: white;
+    display: flex;
+    
+
 }
 
 .xxx video{
@@ -38,7 +45,8 @@ padding-top: 25px;
 
 position:relative;
 z-index: 10;
-
+display: flex;
+    
 
 }
 
@@ -46,6 +54,8 @@ z-index: 10;
 
 
     background-image: url(./img\ 2.jpg);
+    display: flex;
+    
     
 }
 
@@ -55,7 +65,8 @@ text-align: center;
     overflow: hidden;
     white-space: nowrap;
     animation: text 6s steps(30) infinite alternate-reverse;
-
+    display: flex;
+    
     
 }@keyframes text{
 
