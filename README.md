@@ -40,17 +40,15 @@
 
     <div id="clock">8:10:45</div>
    
-  <style>
+<style>
     #clock {
-  font-size: 60px;
-  width: 600px;
-  margin: 50px 0 0 0;
-  text-align: center;
-  border: 4px solid black;
+
+      text-align: center; padding: 60px; font: 60px Helvetica, sans-serif; color: rgb(241, 241, 241);border: 4px solid black;  margin: 50px 0 0 0; 
   border-radius: 20px;
 }
+      @media (min-width: 768px)
+    
   </style>
-
   <script>
     setInterval(showTime, 1000);
 function showTime() {
