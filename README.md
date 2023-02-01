@@ -15,7 +15,7 @@
     </style>
   </head>
   <body>
-   <div class="h-14 bg-gradient-to-r from-violet-500 to-fuchsia-500">
+   <div class="h-100 bg-gradient-to-r from-violet-500 to-fuchsia-500">
      <h1 class="text-3xl font-bold">
     PRABHAT NEPAL
   </h1>
