@@ -33,7 +33,7 @@
         <h1 class="text-1xl font-bold text-amber-400">We&rsquo;ll be back soon!</h1>
         <div>
             <p>Sorry for the inconvenience but we&rsquo;re performing some maintenance at the moment. If you need to you can always <a href="mailto:nepalprabhat21@gmail.com">contact us</a>, otherwise we&rsquo;ll be back online shortly!</p>
-            <p class="text-lime-400">&mdash; The Team</p>
+            <p class="text-lime-400">&mdash; Prabhat Nepal</p>
         </div>
     </article>
   <div class="clock">
@@ -44,9 +44,9 @@
     #clock {
   font-size: 150px;
   width: 900px;
-  margin: 200px;
+  margin: 50px 0 0 0;
   text-align: center;
-  border: 2px solid black;
+  border: 4px solid black;
   border-radius: 20px;
 }
   </style>
