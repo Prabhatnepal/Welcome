@@ -42,7 +42,7 @@
    
   <style>
     #clock {
-  font-size: 100px;
+  font-size: 60px;
   width: 600px;
   margin: 50px 0 0 0;
   text-align: center;
