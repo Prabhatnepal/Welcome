@@ -15,7 +15,7 @@
     </style>
   </head>
   <body>
-   <div class="h-14 bg-gradient-to-r from-violet-500 to-fuchsia-500"></div>
+   <div class="h-14 bg-gradient-to-r from-violet-500 to-fuchsia-500">
      <h1 class="text-3xl font-bold">
     PRABHAT NEPAL
   </h1>
@@ -25,6 +25,6 @@
             <p>Sorry for the inconvenience but we&rsquo;re performing some maintenance at the moment. If you need to you can always <a href="mailto:nepalprabhat21@gmail.com">contact us</a>, otherwise we&rsquo;ll be back online shortly!</p>
             <p>&mdash; The Team</p>
         </div>
-    </article>
+    </article></div>
   </body>
 </html>
