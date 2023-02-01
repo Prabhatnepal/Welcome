@@ -15,6 +15,9 @@
     </style>
   </head>
   <body>
+     <h1 class="text-3xl font-bold underline">
+    PRABHAT NEPAL
+  </h1>
     <article>
         <h1>We&rsquo;ll be back soon!</h1>
         <div>
