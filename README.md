@@ -81,6 +81,57 @@ function showTime() {
 showTime();
   </script>
 </div>
+     <div class="fa">
+      <style>
+ .fa {
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 50px 2px;
+      }
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+
+.fa-instagram {
+  background: #27ea37;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<h2>Contact me:</h2>
+<br>
+
+<!-- Add font awesome icons -->
+<a href="https://www.facebook.com/prabhatnepal.69" class="fa fa-facebook"></a>
+<a href="mailto:nepalprabhat21@gmail.com" class="fa fa-google"></a>
+<a href="#" class="fa fa-linkedin"></a>
+<a href="https://www.instagram.com/nepal_prabhat/" class="fa fa-instagram"></a>
+
+      
+
+</div>
     
   </body>
 </html>
