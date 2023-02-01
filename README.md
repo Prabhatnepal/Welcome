@@ -1,10 +1,8 @@
-
 <html>
-  <head>
-    <title>Site Maintenance</title>
-    <meta charset="utf-8"/>
-    <meta name="robots" content="noindex"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
     <style>
       body { text-align: center; padding: 20px; font: 20px Helvetica, sans-serif; color: #333; }
       @media (min-width: 768px){
