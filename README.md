@@ -34,6 +34,6 @@
             <p>Sorry for the inconvenience but we&rsquo;re performing some maintenance at the moment. If you need to you can always <a href="mailto:nepalprabhat21@gmail.com">contact us</a>, otherwise we&rsquo;ll be back online shortly!</p>
             <p class="text-lime-400">&mdash; The Team</p>
         </div>
-    </article></div>
+    </article>
   </body>
 </html>
