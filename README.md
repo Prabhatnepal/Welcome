@@ -81,7 +81,7 @@ function showTime() {
 showTime();
   </script>
 </div>
-<div class="fa">
+  <div class="fa">
       <style>
  .fa {
   padding: 20px;
@@ -131,7 +131,7 @@ showTime();
 
       
 
-</div>
+ </div>
     
-  </body>
+</body>
 </html>
