@@ -117,8 +117,7 @@ showTime();
   color: white;
 }
 </style>
-</head>
-<body>
+
 
 <h2>Contact me:</h2>
 <br>
