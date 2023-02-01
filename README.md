@@ -15,6 +15,7 @@
     </style>
   </head>
   <body>
+    <div class="bg-cover bg-center ..." style="background-image: url(https://media.istockphoto.com/photos/abstract-network-background-picture-id1194228699?b=1&k=20&m=1194228699&s=612x612&w=0&h=1Z7yvN0VsILpiV425roCH1HSFL-k9op2meaRSlv9gUU=)"></div>
      <h1 class="text-3xl font-bold underline">
     PRABHAT NEPAL
   </h1>
