@@ -100,7 +100,7 @@ showTime();
 
 </div>
  
-  div class="display-flex">
+  <div class="display-flex">
 
     <button class="m-2 border border-black h-16 w-16 p-1  shadow-md shadow-black rounded-full bg-[url('https://img.icons8.com/cute-clipart/1x/instagram-new.png')]"><a href="https://www.instagram.com/nepal_prabhat/">-</button>
     <button class="m-2 border border-black h-16 w-16 p-1  shadow-md shadow-black rounded-full bg-[url('https://img.icons8.com/cute-clipart/1x/facebook-new.png')]"><a href="https://www.facebook.com/prabhatnepal.69">-</button>
