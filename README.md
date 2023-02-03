@@ -82,55 +82,31 @@ showTime();
   </script>
 </div>
   <div class="fa">
-      <style>
- .fa {
-  padding: 20px;
+      <style>   
+    .fa {
+ 
   font-size: 30px;
   text-align: center;
   text-decoration: none;
   margin: 50px 2px;
       }
 
-.fa:hover {
-    opacity: 0.7;
-}
-
-.fa-facebook {
-  background: #3B5998;
-  color: white;
-}
-
-
-.fa-google {
-  background: #dd4b39;
-  color: white;
-}
-
-.fa-linkedin {
-  background: #007bb5;
-  color: white;
-}
-
-
-.fa-instagram {
-  background: #27ea37;
-  color: white;
-}
 </style>
+</head>
 
 
 <h2>Contact me:</h2>
-<br>
 
-<!-- Add font awesome icons -->
-<a href="https://www.facebook.com/prabhatnepal.69" class="fa fa-facebook"></a>
-<a href="mailto:nepalprabhat21@gmail.com" class="fa fa-google"></a>
-<a href="#" class="fa fa-linkedin"></a>
-<a href="https://www.instagram.com/nepal_prabhat/" class="fa fa-instagram"></a>
 
-      
+</div>
+ 
+<div class="display-flex">
 
- </div>
+    <button class="m-2 border border-black h-16 w-16 p-1  shadow-md shadow-black rounded-full bg-[url('https://img.icons8.com/cute-clipart/1x/instagram-new.png')]"><a href="https://www.instagram.com/nepal_prabhat/">-</button>
+    <button class="m-2 border border-black h-16 w-16 p-1  shadow-md shadow-black rounded-full bg-[url('https://img.icons8.com/cute-clipart/1x/facebook-new.png')]"><a href="https://www.facebook.com/prabhatnepal.69">-</button>
+        <button class="m-2 border border-black h-16 w-16 p-1  shadow-md shadow-black rounded-full bg-[url('https://img.icons8.com/cute-clipart/1x/gmail.png')]"><a href="https://mail.google.com/mail/u/1/#inbox">-</button>
+          <button class="m-2 border border-black h-16 w-16 p-1  shadow-md shadow-black rounded-full bg-[url('https://img.icons8.com/cute-clipart/1x/snapchat-squared.png')]"><a href="https://www.snapchat.com">-</button>
+   </div>
     
 </body>
 </html>
