@@ -100,13 +100,13 @@ showTime();
 
 </div>
  
-<div class="display-flex">
+  div class="display-flex">
 
     <button class="m-2 border border-black h-16 w-16 p-1  shadow-md shadow-black rounded-full bg-[url('https://img.icons8.com/cute-clipart/1x/instagram-new.png')]"><a href="https://www.instagram.com/nepal_prabhat/">-</button>
     <button class="m-2 border border-black h-16 w-16 p-1  shadow-md shadow-black rounded-full bg-[url('https://img.icons8.com/cute-clipart/1x/facebook-new.png')]"><a href="https://www.facebook.com/prabhatnepal.69">-</button>
         <button class="m-2 border border-black h-16 w-16 p-1  shadow-md shadow-black rounded-full bg-[url('https://img.icons8.com/cute-clipart/1x/gmail.png')]"><a href="https://mail.google.com/mail/u/1/#inbox">-</button>
           <button class="m-2 border border-black h-16 w-16 p-1  shadow-md shadow-black rounded-full bg-[url('https://img.icons8.com/cute-clipart/1x/snapchat-squared.png')]"><a href="https://www.snapchat.com">-</button>
    </div>
-    </head>
+ </head>
 </body>
 </html>
