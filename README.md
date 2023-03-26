@@ -20,7 +20,7 @@
       <style>
         body
         {
-          background-image:url("https://img.freepik.com/premium-vector/abstract-technology-background-science-connecting-technology_42705-96.jpg")
+          background-color:black;
         }
       </style>
      
