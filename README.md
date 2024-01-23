@@ -1,109 +1,220 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      body { text-align: center; padding: 20px; font: 20px Helvetica, sans-serif; color: rgb(241, 241, 241); }
-      @media (min-width: 768px){
-        body{ padding-top: 150px; }
-      }
-      h1 { font-size: 50px; }
-      article { display: block; text-align: left; max-width: 650px; margin: 0 auto; }
-      a { color: #dc8100; text-decoration: none; }
-      a:hover { color: #333; text-decoration: none; }
-    
-    </style>
-  </head>
-  <body>
-    <div class="bg">
-      <style>
-        body
-        {
-          background-color:black;
-        }
-      </style>
-     
-    </div>
- 
-     <h1 class="text-3xl font-bold">
-    Dear Sir,
-  </h1>
-    <article>
-        <h1 class="text-1xl font-bold text-amber-400">We&rsquo;ll be back soon!</h1>
-        <div>
-            <p>Sorry for the inconvenience but we&rsquo;re performing some maintenance at the moment. If you need to you can always <a href="mailto:nepalprabhat21@gmail.com">contact us</a>, otherwise we&rsquo;ll be back online shortly!</p>
-            <p class="text-lime-400">&mdash; Prabhat Nepal</p>
-        </div>
-    </article>
-  <div class="clock">
+  <title>Prabhat Nepal</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f0f0;
+    }
 
-    <div id="clock">8:10:45</div>
-   
-<style>
-    #clock {
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
 
-      text-align: center; padding: 60px; font: 60px Helvetica, sans-serif; color: rgb(241, 241, 241);border: 4px solid black;  margin: 50px 0 0 0; 
-  border-radius: 20px;
-}
-      @media (min-width: 768px)
-    
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .contact-info {
+      text-align: center;
+    }
+
+    .contact-form {
+      margin-top: 20px;
+      max-width: 400px;
+      width: 100%;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .form-group textarea {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+
+    .form-group button {
+      background-color: #333;
+      color: #fff;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .form-group button:hover {
+      background-color: #555;
+    }
+
+    .chat-button {
+      margin-top: 20px;
+    }
+
+    .chat-button a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+
+    .chat-button a:hover {
+      background-color: #555;
+    }
+
+    .additional-content{
+      margin-top: 20px;
+    }
+
+    .button-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr); /* 5 columns */
+      gap: 10px; /* Gap between buttons */
+      margin-top: 20px;
+    }
+
+    .button-grid a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      text-decoration: darkblue;
+      border-radius: 4px;
+    }
+
+    .button-grid a:hover {
+      background-color: #555;
+    }
+
   </style>
-  <script>
-    setInterval(showTime, 1000);
-function showTime() {
-    let time = new Date();
-    let hour = time.getHours();
-    let min = time.getMinutes();
-    let sec = time.getSeconds();
-    am_pm = "AM";
+</head>
+<body>
+  <header>
+    <h1>Prabhat Nepal</h1>
+  </header>
+
+  <section>
+
+    <section>
+      <div class="contact-info">
+        <h2>Contact Information</h2>
+        <p>Email: nepalprabhat21@gmail.com</p>
+      </div>
+    </section>
   
-    if (hour > 12) {
-        hour -= 12;
-        am_pm = "PM";
-    }
-    if (hour == 0) {
-        hr = 12;
-        am_pm = "AM";
-    }
-  
-    hour = hour < 10 ? "0" + hour : hour;
-    min = min < 10 ? "0" + min : min;
-    sec = sec < 10 ? "0" + sec : sec;
-  
+    <section>
+      <div class="chat-button">
+        <a href="https://chat.openai.com/">Chat with GPT-3.5</a>
+      </div>
+      <!-- ... other content ... -->
+    
+      <!-- New div with the name "additional-content" -->
+      <div class="additional-content">
+        <h2>Lets do a code</h2>
+        <p>This is some additional content within the new div.</p>
+      </div>
+    
+     
+      <div class="button-grid">
+        <a href="https://www.w3schools.com/html/default.asp">HTML</a>
+        <a href="https://www.w3schools.com/css/default.asp">CSS</a>
+        <a href="https://www.w3schools.com/js/default.asp">JavaScript</a>
+        <a href="https://www.w3schools.com/sql/default.asp">SQL</a>
+        <a href="https://www.w3schools.com/python/default.asp">Python</a>
+        <a href="https://www.w3schools.com/java/default.asp">Java</a>
+        <a href="https://www.w3schools.com/python/default.asp">PhP</a>
+        <a href="https://www.w3schools.com/howto/default.asp">How To</a>
+        <a href="https://www.w3schools.com/w3css/default.asp">w3css</a>
+        <a href="https://www.w3schools.com/c/default.asp">C</a>
+        <a href="https://www.w3schools.com/cpp/default.asp">C++</a>
+        <a href="https://www.w3schools.com/cs/default.asp">C#</a>
+        <a href="https://www.w3schools.com/bootstrap/default.asp">Bootstrap</a>
+        <a href="https://www.w3schools.com/react/default.asp">React</a>
+        <a href="https://www.w3schools.com/mysql/default.asp">Mysql</a>
+        <a href="https://www.w3schools.com/jquery/default.asp">Jquery</a>
+        <a href="https://https://www.w3schools.com/excel/index.php">Excel</a>
+        <a href="https://www.w3schools.com/xml/default.asp">Xml</a>
+        <a href="https://www.w3schools.com/Django/index.php">Django</a>
+        <a href="https://https://www.w3schools.com/python/numpy/default.asp">Numpy</a>
+        <a href="https://https://www.w3schools.com/python/pandas/default.asp">Pandas</a>
+        <a href="https://www.w3schools.com/nodejs/default.asp">NodeJs</a>
+        <a href="https://www.w3schools.com/r/default.asp">R</a>
+        <a href="https://www.w3schools.com/typescript/index.php">Typescript</a>
+        <a href="https://www.w3schools.com/angular/default.asp">AngularJs</a>
+        <a href="https://www.w3schools.com/git/default.asp">Git</a>
+        <a href="https://https://www.w3schools.com/postgresql/index.php">Postgresql</a>
+        <a href="https://https://www.w3schools.com/mongodb/index.php">Mongodb</a>
+        <a href="https://www.w3schools.com/Asp/default.asp">Asp</a>
+        <a href="https://www.w3schools.com/aws/index.php">Aws</a>
+        <a href="https://www.w3schools.com/ai/default.asp">AI</a>
+        <a href="https://www.w3schools.com/go/index.php">Go</a>
+        <a href="https://www.w3schools.com/kotlin/index.php">Kotlin</a>
+        <a href="https://https://www.w3schools.com/sass/default.asp">SASS</a>
+        <a href="https://https://www.w3schools.com/vue/index.php">Vue</a>
+        <a href="https://https://www.w3schools.com/gen_ai/index.php">Gen AI</a>
+        <a href="https://https://www.w3schools.com/python/scipy/index.php">Scipy</a>
+        <a href="https://https://www.w3schools.com/cybersecurity/index.php">CyberSecurity</a>
+        <a href="https://https://www.w3schools.com/datascience/default.asp">DataScience</a>
+      </div>
 
-    let currentTime = hour + ":" 
-            + min + ":" + sec +am_pm;
-  
-    document.getElementById("clock")
-            .innerHTML = currentTime;
-}
-showTime();
-  </script>
-</div>
-  <div class="fa">
-      <style>   
-    .fa {
- 
-  font-size: 30px;
-  text-align: center;
-  text-decoration: none;
-  margin: 50px 2px;
-      }
+      
+    </section>
+    
+    <div class="contact-form">
+      <h2>Contact Form</h2>
+      <form>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+          <div class="form-group">
+            <button type="submit">Send Message</button>
+          </div>
+      </form>
+    </div>
 
-</style>
-
-
-
-<h2>Contact me:</h2>
-
-
-  </div>
- 
-  <div class="display-flex">
-
-      <button class="m-2 border border-black h-16 w-16 p-1  shadow-md shadow-black rounded-full bg-[url('https://img.icons8.com/cute-clipart/1x/instagram-new.png')]"><a href="https://www.instagram.com/nepal_prabhat/">-
-      <button class="m-2 border border-black h-16 w-16 p-1  shadow-md shadow-black rounded-full bg-[url('https://img.icons8.com/cute-clipart/1x/facebook-new.png')]"><a href="https://www.facebook.com/prabhatnepal.69">-
-      <button class="m-2 border border-black h-16 w-16 p-1  shadow-md shadow-black rounded-full bg-[url('https://img.icons8.com/cute-clipart/1x/gmail.png')]"><a href="https://mail.google.com/mail/u/1/#inbox">-
-      <button class="m-2 border border-black h-16 w-16 p-1  shadow-md shadow-black rounded-full bg-[url('https://img.icons8.com/cute-clipart/1x/snapchat-squared.png')]"><a href="https://www.snapchat.com">-
-
+</body>
+</html>
