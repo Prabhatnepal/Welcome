@@ -106,6 +106,10 @@
       grid-template-columns: repeat(5, 1fr); /* 5 columns */
       gap: 10px; /* Gap between buttons */
       margin-top: 20px;
+      overflow-y: auto;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
     }
 
     .button-grid a {
@@ -167,29 +171,29 @@
         <a href="https://www.w3schools.com/react/default.asp">React</a>
         <a href="https://www.w3schools.com/mysql/default.asp">Mysql</a>
         <a href="https://www.w3schools.com/jquery/default.asp">Jquery</a>
-        <a href="https://https://www.w3schools.com/excel/index.php">Excel</a>
+        <a href="https://www.w3schools.com/excel/index.php">Excel</a>
         <a href="https://www.w3schools.com/xml/default.asp">Xml</a>
         <a href="https://www.w3schools.com/Django/index.php">Django</a>
-        <a href="https://https://www.w3schools.com/python/numpy/default.asp">Numpy</a>
-        <a href="https://https://www.w3schools.com/python/pandas/default.asp">Pandas</a>
+        <a href="https://www.w3schools.com/python/numpy/default.asp">Numpy</a>
+        <a href="https://www.w3schools.com/python/pandas/default.asp">Pandas</a>
         <a href="https://www.w3schools.com/nodejs/default.asp">NodeJs</a>
         <a href="https://www.w3schools.com/r/default.asp">R</a>
         <a href="https://www.w3schools.com/typescript/index.php">Typescript</a>
         <a href="https://www.w3schools.com/angular/default.asp">AngularJs</a>
         <a href="https://www.w3schools.com/git/default.asp">Git</a>
-        <a href="https://https://www.w3schools.com/postgresql/index.php">Postgresql</a>
-        <a href="https://https://www.w3schools.com/mongodb/index.php">Mongodb</a>
+        <a href="https://www.w3schools.com/postgresql/index.php">Postgresql</a>
+        <a href="https://www.w3schools.com/mongodb/index.php">Mongodb</a>
         <a href="https://www.w3schools.com/Asp/default.asp">Asp</a>
         <a href="https://www.w3schools.com/aws/index.php">Aws</a>
         <a href="https://www.w3schools.com/ai/default.asp">AI</a>
         <a href="https://www.w3schools.com/go/index.php">Go</a>
         <a href="https://www.w3schools.com/kotlin/index.php">Kotlin</a>
-        <a href="https://https://www.w3schools.com/sass/default.asp">SASS</a>
-        <a href="https://https://www.w3schools.com/vue/index.php">Vue</a>
-        <a href="https://https://www.w3schools.com/gen_ai/index.php">Gen AI</a>
-        <a href="https://https://www.w3schools.com/python/scipy/index.php">Scipy</a>
-        <a href="https://https://www.w3schools.com/cybersecurity/index.php">CyberSecurity</a>
-        <a href="https://https://www.w3schools.com/datascience/default.asp">DataScience</a>
+        <a href="https://www.w3schools.com/sass/default.asp">SASS</a>
+        <a href="https://www.w3schools.com/vue/index.php">Vue</a>
+        <a href="https://www.w3schools.com/gen_ai/index.php">Gen AI</a>
+        <a href="https://www.w3schools.com/python/scipy/index.php">Scipy</a>
+        <a href="https://www.w3schools.com/cybersecurity/index.php">CyberSecurity</a>
+        <a href="https://www.w3schools.com/datascience/default.asp">DataScience</a>
       </div>
 
       
