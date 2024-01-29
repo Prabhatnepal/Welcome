@@ -150,7 +150,7 @@
       <!-- New div with the name "additional-content" -->
       <div class="additional-content">
         <h2>Lets do a code</h2>
-        <p>This is some additional content within the new div.</p>
+        <p>Get readyyy.</p>
       </div>
     
      
