@@ -5,11 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Prabhat Nepal</title>
   <style>
+    @keyframes rotate {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+
+@keyframes lightning {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0.8;
+    transform: scaleY(1.2);
+  }
+  40% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  100% {
+    opacity: 0;
+  }
+}
     body {
       margin: 0;
       padding: 0;
       font-family: 'Arial', sans-serif;
       background-color: #f0f0f0;
+      perspective: 1000px;
     }
 
     header {
@@ -31,6 +58,7 @@
     }
 
     .contact-form {
+      align-items: center;
       margin-top: 20px;
       max-width: 400px;
       width: 100%;
@@ -38,6 +66,7 @@
       padding: 20px;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      
     }
 
     .form-group {
@@ -95,6 +124,7 @@
 
     .chat-button a:hover {
       background-color: #555;
+      animation: lightning 5s infinite linear;
     }
 
     .additional-content{
@@ -123,7 +153,48 @@
 
     .button-grid a:hover {
       background-color: #555;
+      animation: rotate 10s infinite linear; /* Apply the rotate animation */
+      transform-style: preserve-3d; /* Preserve 3D transformations */
     }
+    footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-info {
+  flex: 1;
+  text-align: left;
+}
+
+.social-media {
+  flex: 1;
+  text-align: right;
+}
+
+.social-media a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 20px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #007bff; /* Change the color to your desired hover color */
+}
+
+.copyright {
+  margin-top: 20px;
+}
 
   </style>
 </head>
@@ -131,8 +202,6 @@
   <header>
     <h1>Prabhat Nepal</h1>
   </header>
-
-  <section>
 
     <section>
       <div class="contact-info">
@@ -198,26 +267,47 @@
 
       
     </section>
+
     
-    <div class="contact-form">
-      <h2>Contact Form</h2>
-      <form>
-        <div class="form-group">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-          </div>
+    <section>
+      <div class="contact-form">
+        <h2>Contact Form</h2>
+        <form>
           <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          <div class="form-group">
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-          </div>
-          <div class="form-group">
-            <button type="submit">Send Message</button>
-          </div>
-      </form>
-    </div>
-
-
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+              <button type="submit">Send Message</button>
+            </div>
+        </form>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-info">
+          <h2>Contact Information</h2>
+          <p>Email: nepalprabhat21@gmail.com</p>
+        </div>
+        <div class="social-media">
+          <h2>Follow Me</h2>
+          <!-- Add your Font Awesome social media icons and links here -->
+          <a href="https://www.facebook.com/prabhatnepal.69" target="_blank"><img src="https://img.icons8.com/?size=48&id=118497&format=png" alt="Facebook"></a>
+          <a href="https://twitter.com/prabhat69x" target="_blank"><img src="https://img.icons8.com/?size=48&id=5MQ0gPAYYx7a&format=png" alt="Twitter"></a>
+          <a href="https://www.instagram.com/nepal_prabhat/" target="_blank"><img src="https://img.icons8.com/?size=48&id=Xy10Jcu1L2Su&format=png" alt="Instagram"></a>
+          <a href="https://github.com/Prabhatnepal" target="_blank"><img src="https://img.icons8.com/?size=48&id=63777&format=png" alt="Github"></a>
+          <!-- Add more icons as needed -->
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2024 Prabhat Nepal. All rights reserved.</p>
+      </div>
+    </footer>
