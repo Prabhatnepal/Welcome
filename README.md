@@ -4,7 +4,64 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Prabhat Nepal</title>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const randomNumber = Math.floor(Math.random() * 10) + 1;
+      const guessForm = document.getElementById("guessForm");
+      const guessInput = document.getElementById("guessInput");
+      const resultMessage = document.getElementById("resultMessage");
+      const plane = document.getElementById("plane");
+      const cloud = document.getElementById("cloud");
+  
+      guessForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const userGuess = parseInt(guessInput.value);
+  
+        if (isNaN(userGuess)) {
+          resultMessage.textContent = "Please enter a valid number.";
+        } else {
+          if (userGuess === randomNumber) {
+            resultMessage.textContent = "Congratulations! You guessed the correct number!";
+            plane.style.animation = "flyPlane 3s linear forwards";
+          } else {
+            resultMessage.textContent = `Sorry, the correct number was ${randomNumber}. Try again!`;
+            cloud.style.animation = "lightningStrike 2s infinite linear";
+          }
+        }
+      });
+    });
+  </script>
   <style>
+    @keyframes flyPlane {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(80vw);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+
+@keyframes lightningStrike {
+  0% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  20% {
+    opacity: 0.8;
+    transform: scaleY(1.2);
+  }
+  40% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
     @keyframes rotate {
   from {
     transform: rotateY(0deg);
@@ -51,10 +108,6 @@
       flex-direction: column;
       align-items: center;
       padding: 20px;
-    }
-
-    .contact-info {
-      text-align: center;
     }
 
     .contact-form {
@@ -132,8 +185,8 @@
     }
 
     .button-grid {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
       display: grid;
-      grid-template-columns: repeat(5, 1fr); /* 5 columns */
       gap: 10px; /* Gap between buttons */
       margin-top: 20px;
       overflow-y: auto;
@@ -156,6 +209,24 @@
       animation: rotate 10s infinite linear; /* Apply the rotate animation */
       transform-style: preserve-3d; /* Preserve 3D transformations */
     }
+    #plane {
+  width: 50px;
+  height: 20px;
+  background-color: #66ccff;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
+#cloud {
+  width: 100px;
+  height: 50px;
+  background-color: #f0f0f0;
+  position: absolute;
+  top: 20%;
+  right: 0;
+  animation: lightningStrike 2s infinite linear;
+}
     footer {
   background-color: #333;
   color: #fff;
@@ -203,13 +274,6 @@
     <h1>Prabhat Nepal</h1>
   </header>
 
-    <section>
-      <div class="contact-info">
-        <h2>Contact Information</h2>
-        <p>Email: nepalprabhat21@gmail.com</p>
-      </div>
-    </section>
-  
     <section>
       <div class="chat-button">
         <a href="https://chat.openai.com/">Chat with GPT-3.5</a>
@@ -265,7 +329,18 @@
         <a href="https://www.w3schools.com/datascience/default.asp">DataScience</a>
       </div>
 
-      
+      <div class="additional-content">
+        <h2>Let's play a game</h2>
+        <p>Guess the number between 1 and 10:</p>
+        <form id="guessForm">
+          <input type="number" id="guessInput" min="1" max="10" required>
+          <button type="submit">Submit Guess</button>
+        </form>
+        <p id="resultMessage"></p>
+    
+        <div id="plane"></div>
+        <div id="cloud"></div>
+      </div>
     </section>
 
     
@@ -279,7 +354,8 @@
             </div>
             <div class="form-group">
               <label for="email">Email:</label>
-              <input type="email" id="email" name="email" required>
+              <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+
             </div>
             <div class="form-group">
               <label for="message">Message:</label>
