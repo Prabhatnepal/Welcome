@@ -6,7 +6,7 @@
   <title>Prabhat Nepal</title>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const randomNumber = Math.floor(Math.random() * 10) + 1;
+      const randomNumber = Math.floor(Math.random() * 100) + 1;
       const guessForm = document.getElementById("guessForm");
       const guessInput = document.getElementById("guessInput");
       const resultMessage = document.getElementById("resultMessage");
@@ -331,9 +331,9 @@
 
       <div class="additional-content">
         <h2>Let's play a game</h2>
-        <p>Guess the number between 1 and 10:</p>
+        <p>Guess the number between 1 and 100:</p>
         <form id="guessForm">
-          <input type="number" id="guessInput" min="1" max="10" required>
+          <input type="number" id="guessInput" min="1" max="100" required>
           <button type="submit">Submit Guess</button>
         </form>
         <p id="resultMessage"></p>
