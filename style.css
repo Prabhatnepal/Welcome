@@ -72,17 +72,6 @@
         text-align: center;
       }
 
-      .logo {
-        display: flex;
-        align-items: center;
-      }
-      
-      .logo img {
-        height: 40px; /* Adjust the height according to your design */
-        margin-right: 10px;
-        transition: transform 0.3s ease; /* Add transition for smooth animation */
-      }
-      
       .logo h1 {
         margin: 0;
         font-size: 1.5rem;
