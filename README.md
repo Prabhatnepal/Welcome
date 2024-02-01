@@ -13,7 +13,7 @@
       const plane = document.getElementById("plane");
       const cloud = document.getElementById("cloud");
   
-      guessForm.addEventListener("submit", function (event) {
+      guessForm.addEventListener("submit", function (event) {   
         event.preventDefault();
         const userGuess = parseInt(guessInput.value);
   
