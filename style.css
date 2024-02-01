@@ -72,22 +72,24 @@
         text-align: center;
       }
 
+      .logo {
+        display: flex;
+        align-items: center;
+      }
+      
+      .logo img {
+        height: 40px; /* Adjust the height according to your design */
+        margin-right: 10px;
+        transition: transform 0.3s ease; /* Add transition for smooth animation */
+      }
+      
       .logo h1 {
         margin: 0;
         font-size: 1.5rem;
       }
       
       /* Add a media query for screens smaller than 600px */
-      @media only screen and (max-width: 600px) {
-        .logo {
-          justify-content: space-between;
-          align-items: center;
-        }
-      
-        .logo img {
-          margin-right: 0;
-        }
-      }
+  
       
       /* Add hover animation to the logo */
       .logo:hover img {
