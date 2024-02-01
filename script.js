@@ -1,3 +1,4 @@
+// game 
 document.addEventListener("DOMContentLoaded", function () {
     const randomNumber = Math.floor(Math.random() * 100) + 1;
     const guessForm = document.getElementById("guessForm");
@@ -23,3 +24,17 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+
+  //photoshoot
+  const photos = document.querySelectorAll('.photo-container img');
+
+photos.forEach(photo => {
+    photo.addEventListener('mouseenter', () => {
+        photo.style.transform = 'scale(1.2)';
+    });
+
+    photo.addEventListener('mouseleave', () => {
+        photo.style.transform = 'scale(1)';
+    });
+});
