@@ -1,3 +1,6 @@
+@media only screen and (max-width: 600px) {
+}
+
 @keyframes flyPlane {
     0% {
       transform: translateX(0);
@@ -68,6 +71,40 @@
         padding: 20px;
         text-align: center;
       }
+
+      .logo {
+        display: flex;
+        align-items: center;
+      }
+      
+      .logo img {
+        height: 40px; /* Adjust the height according to your design */
+        margin-right: 10px;
+        transition: transform 0.3s ease; /* Add transition for smooth animation */
+      }
+      
+      .logo h1 {
+        margin: 0;
+        font-size: 1.5rem;
+      }
+      
+      /* Add a media query for screens smaller than 600px */
+      @media screen and (max-width: 600px) {
+        .logo {
+          justify-content: space-between;
+          align-items: center;
+        }
+      
+        .logo img {
+          margin-right: 0;
+        }
+      }
+      
+      /* Add hover animation to the logo */
+      .logo:hover img {
+        transform: scale(1.2); /* Increase the size on hover */
+      }
+
   
       section {
         display: flex;
@@ -147,7 +184,29 @@
       }
   
       .additional-content{
-        margin-top: 20px;
+        margin-bottom: 40px;
+      }
+
+      #guessForm {
+        margin-bottom: 20px;
+      }
+      #plane {
+        width: 50px;
+        height: 20px;
+        background-color: #66ccff;
+        position: absolute;
+        top: 50%;
+        left: 0;
+      }
+      
+      #cloud {
+        width: 100px;
+        height: 50px;
+        background-color: #f0f0f0;
+        position: absolute;
+        top: 20%;
+        right: 0;
+        animation: lightningStrike 2s infinite linear;
       }
   
       .button-grid {
@@ -159,8 +218,8 @@
         width: 100%;
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
       }
-  
       .button-grid a {
         display: inline-block;
         padding: 10px 20px;
@@ -168,6 +227,7 @@
         color: #fff;
         text-decoration: darkblue;
         border-radius: 4px;
+
       }
   
       .button-grid a:hover {
@@ -180,26 +240,48 @@
     height: 20px;
     background-color: #66ccff;
     position: absolute;
-    top: 50%;
+    top: 34%;
     left: 0;
   }
   
   #cloud {
-    width: 100px;
-    height: 50px;
-    background-color: #f0f0f0;
+    width: 50px;
+    height: 20px;
+    background-color: #e40303;
     position: absolute;
-    top: 20%;
+    top: 34%;
     right: 0;
     animation: lightningStrike 2s infinite linear;
   }
+  #photoshoot-section {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  #photoshoot-section h2 {
+    margin-bottom: 20px;
+  }
+  
+  .photo-container {
+    display: flex;
+    overflow-x: auto; /* Add horizontal scrollbar if images overflow */
+  }
+  
+  .photo-container img {
+    max-width: 100%; /* Adjust the maximum width of the images */
+    height: auto;
+    margin: 10px;
+  }
+
       footer {
+        max-width: 100%;
+  height: auto;
     background-color: #333;
     color: #fff;
     padding: 20px;
     text-align: center;
   }
-    @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 600px) {
     .footer-content {
       flex-direction: column;
       display: flex;
@@ -208,7 +290,6 @@
     flex-wrap: wrap;
     }
   }
-  
   .footer-info {
     flex: 1;
     text-align: left;
