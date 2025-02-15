@@ -39,21 +39,21 @@ photos.forEach(photo => {
     });
 });
 
-// Snow Effect
+// Heart Effect
 const canvas = document.getElementById("snowCanvas");
 const ctx = canvas.getContext("2d");
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-const snowflakes = [];
-const numberOfSnowflakes = 100;
+const hearts = [];
+const numberOfHearts = 100;
 
-class Snowflake {
+class Heart {
   constructor() {
     this.x = Math.random() * canvas.width;
     this.y = Math.random() * canvas.height;
-    this.radius = Math.random() * 4 + 2; // Snowflake size
+    this.radius = Math.random() * 4 + 2; // Heart size
     this.speed = Math.random() * 2 + 0.5; // Falling speed
     this.wind = Math.random() * 1 - 0.5; // Sideways drift
     this.opacity = Math.random() * 0.8 + 0.2; // Transparency
@@ -66,7 +66,7 @@ class Snowflake {
     this.x += this.wind;
     this.rotation += this.rotationSpeed;
 
-    // Reset position when snowflake exits screen
+    // Reset position when heart exits screen
     if (this.y > canvas.height) this.y = 0;
     if (this.x > canvas.width) this.x = 0;
     if (this.x < 0) this.x = canvas.width;
@@ -78,36 +78,31 @@ class Snowflake {
     ctx.translate(this.x, this.y);
     ctx.rotate((this.rotation * Math.PI) / 180);
 
-    // Draw a star-like snowflake
+    // Draw a red heart shape
     ctx.beginPath();
-    for (let i = 0; i < 6; i++) {
-      ctx.lineTo(0, -this.radius);
-      ctx.translate(0, -this.radius);
-      ctx.rotate((Math.PI * 2) / 12);
-      ctx.lineTo(0, this.radius);
-      ctx.translate(0, this.radius);
-      ctx.rotate(-(Math.PI * 2) / 6);
-    }
+    ctx.moveTo(0, this.radius / 2);
+    ctx.arc(-this.radius / 2, -this.radius / 2, this.radius / 2, Math.PI, 0, false);
+    ctx.arc(this.radius / 2, -this.radius / 2, this.radius / 2, Math.PI, 0, false);
     ctx.closePath();
-    ctx.fillStyle = "white";
+    ctx.fillStyle = "red";
     ctx.fill();
     ctx.restore();
   }
 }
 
-// Create initial snowflakes
-for (let i = 0; i < numberOfSnowflakes; i++) {
-  snowflakes.push(new Snowflake());
+// Create initial hearts
+for (let i = 0; i < numberOfHearts; i++) {
+  hearts.push(new Heart());
 }
 
 // Animation loop
-function animateSnow() {
+function animateHearts() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  snowflakes.forEach((snowflake) => {
-    snowflake.update();
-    snowflake.draw();
+  hearts.forEach((heart) => {
+    heart.update();
+    heart.draw();
   });
-  requestAnimationFrame(animateSnow);
+  requestAnimationFrame(animateHearts);
 }
 
 // Resize canvas on window resize
@@ -117,5 +112,4 @@ window.addEventListener("resize", () => {
 });
 
 // Start the animation
-animateSnow();
-
+animateHearts();
