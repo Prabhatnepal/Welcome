@@ -1,313 +1,241 @@
-@media only screen and (max-width: 600px) {
+/* Base styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+  perspective: 1000px;
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
-@keyframes flyPlane {
-    0% {
-      transform: translateX(0);
-    }
-    50% {
-      transform: translateX(90vw);
-    }
-    100% {
-      transform: translateX(0);
-    }
-  }
-  
-  @keyframes lightningStrike {
-    0% {
-      opacity: 1;
-      transform: scaleY(1);
-    }
-    20% {
-      opacity: 0.8;
-      transform: scaleY(1.2);
-    }
-    40% {
-      opacity: 1;
-      transform: scaleY(1);
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-  
-      @keyframes rotate {
-    from {
-      transform: rotateY(0deg);
-    }
-    to {
-      transform: rotateY(360deg);
-    }
-  }
-  
-  
-  @keyframes lightning {
-    0% {
-      opacity: 1;
-    }
-    20% {
-      opacity: 0.8;
-      transform: scaleY(1.2);
-    }
-    40% {
-      opacity: 1;
-      transform: scaleY(1);
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: 'Arial', sans-serif;
-        background-color: #f0f0f0;
-        perspective: 1000px;
-      }
-  
-      header {
-        background-color: #333;
-        color: #fff;
-        padding: 20px;
-        text-align: center;
-      }
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
 
-      .logo {
-        display: flex;
-        align-items: center;
-      }
-      
-      .logo img {
-        height: 40px; /* Adjust the height according to your design */
-        margin-right: 10px;
-        transition: transform 0.3s ease; /* Add transition for smooth animation */
-      }
-      
-      .logo h1 {
-        margin: 0;
-        font-size: 1.5rem;
-      }
-      
-      /* Add a media query for screens smaller than 600px */
-  
-      
-      /* Add hover animation to the logo */
-      .logo:hover img {
-        transform: scale(1.2); /* Increase the size on hover */
-      }
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 100%;
+}
 
-  
-      section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-      }
-  
-      .contact-form {
-        align-items: center;
-        margin-top: 20px;
-        max-width: 400px;
-        width: 100%;
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        
-      }
-  
-      .form-group {
-        margin-bottom: 15px;
-      }
-  
-      .form-group label {
-        display: block;
-        font-weight: bold;
-        margin-bottom: 5px;
-      }
-  
-      .form-group input {
-        width: 100%;
-        padding: 8px;
-        box-sizing: border-box;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-      }
-  
-      .form-group textarea {
-        width: 100%;
-        padding: 8px;
-        box-sizing: border-box;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        resize: vertical;
-      }
-  
-      .form-group button {
-        background-color: #333;
-        color: #fff;
-        padding: 8px 12px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-      }
-  
-      .form-group button:hover {
-        background-color: #555;
-      }
-  
-      .chat-button {
-        margin-top: 20px;
-      }
-  
-      .chat-button a {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #333;
-        color: #fff;
-        text-decoration: none;
-        border-radius: 4px;
-      }
-  
-      .chat-button a:hover {
-        background-color: #555;
-        animation: lightning 5s infinite linear;
-      }
-  
-      .additional-content{
-        margin-bottom: 40px;
-      }
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
 
-      #guessForm {
-        margin-bottom: 20px;
-      }
-      #plane {
-        width: 50px;
-        height: 20px;
-        background-color: #66ccff;
-        position: absolute;
-        top: 50%;
-        left: 0;
-      }
-      
-      #cloud {
-        width: 100px;
-        height: 50px;
-        background-color: #f0f0f0;
-        position: absolute;
-        top: 20%;
-        right: 0;
-        animation: lightningStrike 2s infinite linear;
-      }
-  
-      .button-grid {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-        display: grid;
-        gap: 10px; /* Gap between buttons */
-        margin-top: 20px;
-        overflow-y: auto;
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      .button-grid a {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #333;
-        color: #fff;
-        text-decoration: darkblue;
-        border-radius: 4px;
+.logo h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
 
-      }
-  
-      .button-grid a:hover {
-        background-color: #555;
-        animation: rotate 10s infinite linear; /* Apply the rotate animation */
-        transform-style: preserve-3d; /* Preserve 3D transformations */
-      }
-      #plane {
-    width: 50px;
-    height: 20px;
-    background-color: #66ccff;
-    position: absolute;
-    top: 34%;
-    left: 0;
-  }
-  
-  #cloud {
-    width: 50px;
-    height: 20px;
-    background-color: #e40303;
-    position: absolute;
-    top: 34%;
-    right: 0;
-    animation: lightningStrike 2s infinite linear;
-  }
-  #photoshoot-section {
+/* Hover effect for logo */
+.logo:hover img {
+  transform: scale(1.2);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-form {
+  align-items: center;
+  margin-top: 20px;
+  max-width: 400px;
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-group button {
+  background-color: #333;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-group button:hover {
+  background-color: #555;
+}
+
+.chat-button {
+  margin-top: 20px;
+}
+
+.chat-button a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.chat-button a:hover {
+  background-color: #555;
+  animation: lightning 5s infinite linear;
+}
+
+/* Button Grid */
+.button-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.button-grid a {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.button-grid a:hover {
+  background-color: #555;
+  animation: rotate 10s infinite linear;
+  transform-style: preserve-3d;
+}
+
+#photoshoot-section {
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+}
+
+#photoshoot-section h2 {
+  margin-bottom: 20px;
+}
+
+.photo-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.photo-container img {
+  max-width: 100%;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.footer-info,
+.social-media {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.social-media a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 20px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #007bff;
+}
+
+.copyright {
+  margin-top: 20px;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 600px) {
+  .logo {
+    flex-direction: column;
     text-align: center;
-    padding: 20px;
   }
-  
-  #photoshoot-section h2 {
-    margin-bottom: 20px;
-  }
-  
-  .photo-container {
+
+  .footer-content {
+    flex-direction: column;
     display: flex;
-    overflow-x: auto; /* Add horizontal scrollbar if images overflow */
-  }
-  
-  .photo-container img {
-    max-width: 100%; /* Adjust the maximum width of the images */
-    height: auto;
-    margin: 10px;
-  }
-
-      footer {
-        max-width: 100%;
-  height: auto;
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-  }
-  @media only screen and (max-width: 600px) {
-    .footer-content {
-      flex-direction: column;
-      display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    }
-  }
-  .footer-info {
-    flex: 1;
-    text-align: left;
-  }
-  
-  .social-media {
-    flex: 1;
-    text-align: right;
-  }
-  
-  .social-media a {
-    color: #fff;
-    margin: 0 10px;
-    font-size: 20px;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .social-media a:hover {
-    color: #007bff; /* Change the color to your desired hover color */
-  }
-  
-  .copyright {
-    margin-top: 20px;
   }
 
- #snowCanvas {
+  .button-grid {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .contact-form {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group button {
+    font-size: 14px;
+  }
+
+  .social-media a {
+    font-size: 18px;
+    margin: 0 5px;
+  }
+
+  .photo-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .photo-container img {
+    width: 80%;
+  }
+}
+
+/* Canvas for snow effect */
+#snowCanvas {
   position: fixed;
   top: 0;
   left: 0;
@@ -315,4 +243,61 @@
   height: 100%;
   pointer-events: none;
   z-index: 999;
+}
+
+/* Animations */
+@keyframes flyPlane {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(90vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes lightningStrike {
+  0% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  20% {
+    opacity: 0.8;
+    transform: scaleY(1.2);
+  }
+  40% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes lightning {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0.8;
+    transform: scaleY(1.2);
+  }
+  40% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  100% {
+    opacity: 0;
+  }
 }
