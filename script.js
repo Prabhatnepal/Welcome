@@ -31,11 +31,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 photos.forEach(photo => {
     photo.addEventListener('mouseenter', () => {
-        photo.style.transform = 'scale(1.2)';
+        photo.style.transform = 'scale(0.75)';
     });
 
     photo.addEventListener('mouseleave', () => {
-        photo.style.transform = 'scale(1)';
+        photo.style.transform = 'scale(0.5)';
     });
 });
 
