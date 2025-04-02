@@ -293,6 +293,7 @@ footer {
   .contact-form {
     width: 90%;
     padding: 10px;
+  
   }
 
   .form-group input,
@@ -376,4 +377,27 @@ footer {
   .copyright {
     margin-top: 10px;
   }
+}
+
+.falling {
+  position: absolute;
+  top: -10%;
+  opacity: 0.8;
+  animation: fall linear infinite;
+}
+
+/* Vary animation speeds */
+@keyframes fall {
+  from { transform: translateY(-10%); opacity: 1; }
+  to { transform: translateY(100vh); opacity: 0; }
+}
+
+#seasonal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* Prevent blocking clicks */
+  z-index: -1; /* Moves animation behind everything */
 }
