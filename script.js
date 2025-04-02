@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
         resultMessage.textContent = `Sorry, the correct number was ${randomNumber}. Try again!`;
         cloud.style.animation = "lightningStrike 2s infinite linear";
       }
-    }
+    } 
   });
 });
 
