@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
         cloud.style.animation = "lightningStrike 2s infinite linear";
       }
     } 
-  });
+  }); 
 });
 
 
