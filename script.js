@@ -57,30 +57,6 @@ function applySeasonalEffect() {
   // Valentine's Special
   const today = new Date().getDate();
   if (month === 1 && today >= 7 && today <= 14) emoji = "❤️";
-
- // April 1st (April Fool's Day) Wobble Effect
-  if (today.getMonth() === 3 && today.getDate() === 1) {
-    gsap.utils.toArray("h1, h2, h3, .project, .photo-container img, .contact-form, .button-grid a").forEach((element) => {
-      gsap.to(element, {
-        x: "random(-5, 5)",
-        rotation: "random(-5, 5)",
-        repeat: -1,
-        yoyo: true,
-        duration: 0.2,
-        ease: "sine.inOut",
-      });
-    });
-  }
-
-  // January 1st (New Year's Day) Fireworks Burst Effect
-  if (today.getMonth() === 0 && today.getDate() === 1) {
-    gsap.utils.toArray("h1, h2, h3, .project, .photo-container img, .contact-form, .button-grid a").forEach((element) => {
-      gsap.fromTo(element, 
-        { scale: 0.5, opacity: 0 },
-        { scale: 1.2, opacity: 1, duration: 0.5, ease: "back.out(2)", repeat: 1, yoyo: true }
-      );
-    });
-  }
   
   // Create multiple falling elements
   for (let i = 0; i < 20; i++) {
