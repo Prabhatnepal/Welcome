@@ -266,31 +266,58 @@ document.addEventListener("DOMContentLoaded", function () {
         button { padding: 10px 20px;  margin-top: 10px;}
         
       </style>
+      <style>
+        #videoSection { display: none; margin-top: 20px; }
+        input { padding: 10px; font-size: 16px; }
+        button { padding: 10px 20px; margin-top: 10px; }
+      </style>
+      
       <h1>🔒 Admin Vault</h1>
       <p>Note: You need special token to get access</p>
       <p>Enter access code to unlock:</p>
       <input type="password" id="codeInput" placeholder="Enter code">
       <button onclick="unlockVault()">Unlock</button>
-    
-      <div id="videoSection">
-        <h2>🎬 Secret Video</h2>
-        <video width="640" controls>
-          <source src="/2025-04-05-03-54-15.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-    
+      
+      <div id="videoSection"></div>
+      
       <script>
-        function unlockVault() {
-          const input = document.getElementById("codeInput").value;
-          const encoded = btoa("4321"); 
-          if (btoa(input) === encoded) {
-            document.getElementById("videoSection").style.display = "block";
-          } else {
-            alert("Wrong code!");
+        // 🔐 Obfuscated unlock function
+        (function () {
+          function _0xobfUnlock() {
+            const _input = document.getElementById("codeInput").value;
+            const _correct = "NDMyMQ==";
+            if (btoa(_input) === _correct) {
+              const section = document.getElementById("videoSection");
+              section.style.display = "block";
+              section.innerHTML = `
+                <h2>🎬 Secret Video</h2>
+                <video width="640" controls>
+                  <source src="/2025-04-05-03-54-15.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              `;
+            } else {
+              alert("Wrong code!");
+            }
           }
-        }
+      
+          // Expose to global scope as unlockVault
+          window['unlockVault'] = _0xobfUnlock;
+        })();
+      
+        // 🚫 Anti-inspect (basic deterrents)
+        document.addEventListener('contextmenu', e => e.preventDefault());
+        document.addEventListener('keydown', function (e) {
+          if (
+            e.key === "F12" ||
+            (e.ctrlKey && e.shiftKey && ["I", "J", "C"].includes(e.key.toUpperCase())) ||
+            (e.ctrlKey && e.key === "U")
+          ) {
+            e.preventDefault();
+          }
+        });
       </script>
+      
       
     </section>
 
