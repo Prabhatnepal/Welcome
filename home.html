@@ -4,12 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Prabhat Nepal</title> 
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="home.css">
+  <script src="home.js" defer></script>
 </head>
 <body> 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
 <script>
   document.addEventListener("DOMContentLoaded", function () {
   gsap.registerPlugin(ScrollTrigger);
@@ -65,11 +66,11 @@
 document.addEventListener("DOMContentLoaded", function () {
   gsap.registerPlugin(ScrollTrigger);
 
-  /* document.addEventListener("DOMContentLoaded", () => {
+/* document.addEventListener("DOMContentLoaded", () => {
     const today = new Date();
 
     // 🎉 April Fool's Wobble Effect
-    if (today.getMonth() === 3 && today.getDate() === 1) {
+    if (today.getMonth() === 3 && today.getDate() === 6) {
       gsap.utils.toArray("h1, h2, h3, .project, .photo-container img, .contact-form, .button-grid a").forEach((el) => {
         gsap.to(el, {
           x: "random(-5, 5)",
@@ -83,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // 🎆 New Year's Fireworks Burst Effect
-    if (today.getMonth() === 0 && today.getDate() === 1) {
+    if (today.getMonth() === 4 && today.getDate() === 4) {
       gsap.utils.toArray("h1, h2, h3, .project, .photo-container img, .contact-form, .button-grid a").forEach((el) => {
         gsap.fromTo(el, 
           { scale: 0.5, opacity: 0 },
@@ -91,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
         );
       });
     }
-  }); */
+  });   */
 
   // Heading Animation (Typing Effect)
   const headings = document.querySelectorAll("h1, h2, h3");
@@ -258,10 +259,39 @@ document.addEventListener("DOMContentLoaded", function () {
           <button type="submit">Submit Guess</button>
         </form>
         <p id="resultMessage"></p>
-    
-        <div id="plane"></div>
-        <div id="cloud"></div>
       </div>
+      <style>
+        #videoSection { display: none; margin-top: 20px; }
+        input { padding: 10px; font-size: 16px; }
+        button { padding: 10px 20px;  margin-top: 10px;}
+        
+      </style>
+      <h1>🔒 Admin Vault</h1>
+      <p>Note: You need special token to get access</p>
+      <p>Enter access code to unlock:</p>
+      <input type="password" id="codeInput" placeholder="Enter code">
+      <button onclick="unlockVault()">Unlock</button>
+    
+      <div id="videoSection">
+        <h2>🎬 Secret Video</h2>
+        <video width="640" controls>
+          <source src="/2025-04-05-03-54-15.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    
+      <script>
+        function unlockVault() {
+          const input = document.getElementById("codeInput").value;
+          const encoded = btoa("4321"); 
+          if (btoa(input) === encoded) {
+            document.getElementById("videoSection").style.display = "block";
+          } else {
+            alert("Wrong code!");
+          }
+        }
+      </script>
+      
     </section>
 
 <!-- Photoshoot Section -->
@@ -327,6 +357,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <button type="submit">Send Message</button>
   </div>
 </form>
+
 
       </div>
     </section>
