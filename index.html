@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PRABhAT | Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      background: #0e0e0e;
+      color: white;
+      font-family: 'Courier New', monospace;
+      overflow: hidden;
+    }
+
+    #loader {
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      background: #0e0e0e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .fancy-text {
+    font-size: 4rem;
+    font-weight: bold;
+    display: inline-block; /* Required for gradient text */
+    background: linear-gradient(90deg, #ff00cc, #3333ff, #00ffff); /* Gradient color */
+    background-clip: text; /* Clips the background to text */
+    -webkit-background-clip: text; /* For Webkit browsers (Chrome, Safari) */
+    color: transparent; /* Makes the text transparent */
+    -webkit-text-fill-color: transparent; /* For Webkit browsers */
+    text-shadow: 0 0 10px rgba(255, 0, 255, 0.3), 0 0 20px rgba(0, 255, 255, 0.2);
+    border-right: 2px solid #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: blink-caret 0.75s step-end infinite;
+  }
+
+
+    @keyframes blink-caret {
+      50% { border-color: transparent; }
+    }
+
+    .blast-wrapper {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .spark, .smoke, .bullet-hole, .blood-drip {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .spark {
+      width: 60px;
+      height: 60px;
+      background: radial-gradient(circle, orange, red, transparent);
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+
+    .smoke {
+      width: 80px;
+      height: 80px;
+      background: radial-gradient(circle, rgba(200, 200, 200, 0.4), transparent);
+      border-radius: 50%;
+      transition: all 1s ease;
+    }
+
+    .bullet-hole {
+      width: 30px;
+      height: 30px;
+      background: radial-gradient(circle, black 60%, transparent 70%);
+      border-radius: 50%;
+      transition: all 0.2s ease;
+    }
+
+    .blood-drip {
+      width: 5px;
+      height: 15px;
+      background: red;
+      border-radius: 50%;
+      opacity: 0;
+      transform: translateY(10px) scale(0.5);
+      transition: all 1s ease;
+    }
+
+    .blast-active .spark, .blast-active .smoke, .blast-active .bullet-hole, .blast-active .blood-drip {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+
+    .blast {
+      animation: blast-shake 0.2s ease;
+    }
+
+    @keyframes blast-shake {
+      0%, 100% { transform: translate(0, 0); }
+      25% { transform: translate(-5px, 5px); }
+      50% { transform: translate(5px, -5px); }
+      75% { transform: translate(-3px, 3px); }
+    }
+
+    #flash-effect {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: white;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 10000;
+      transition: opacity 0.2s ease-out;
+    }
+
+    #main-content {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="flash-effect"></div>
+
+  <!-- Loading Animation -->
+  <div id="loader">
+    <div class="blast-wrapper">
+      <h1 id="typing-text" class="fancy-text"></h1>
+      <div class="spark"></div>
+      <div class="smoke"></div>
+      <div class="bullet-hole"></div>
+      <div class="blood-drip"></div>
+    </div>
+  </div>
+
+  <!-- Gunshot Sound -->
+  <audio id="gunshot" src="/sound/rifle-gunshot-99749.mp3" preload="auto" autoplay="true"></audio>
+
+  <!-- Main Content -->
+  <div id="main-content">
+    <h2>Welcome to my portfolio!</h2>
+    <!-- Your portfolio content here -->
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const text = "PRABhAT";
+      const typingElement = document.getElementById("typing-text");
+      const gunshot = document.getElementById("gunshot");
+      const flashEffect = document.getElementById("flash-effect");
+      const blastWrapper = document.querySelector(".blast-wrapper");
+      const smoke = document.querySelector(".smoke");
+      const bulletHole = document.querySelector(".bullet-hole");
+      const bloodDrip = document.querySelector(".blood-drip");
+      let index = 0;
+
+      function typeNextChar() {
+        if (index < text.length) {
+          typingElement.textContent += text.charAt(index);
+          index++;
+          setTimeout(typeNextChar, 250);
+        } else {
+          playGunshotAndBlast();
+        }
+      }
+
+      function playGunshotAndBlast() {
+        gunshot.currentTime = 0;
+        gunshot.play().catch(err => console.warn("Audio play failed:", err));
+        blastWrapper.classList.add("blast-active");
+        document.body.classList.add("blast");
+
+        flashEffect.style.opacity = "1";
+
+          // Trigger smoke puff and blood drip after gunshot
+      setTimeout(() => {
+        smoke.style.transform = "scale(1)";
+        smoke.style.opacity = "1";
+        bulletHole.style.transform = "scale(1)";
+        bulletHole.style.opacity = "1";
+        bloodDrip.style.transform = "scale(1) translateY(0)";
+        bloodDrip.style.opacity = "1";
+      }, 100);
+
+      setTimeout(() => {
+        flashEffect.style.opacity = "0";
+        document.body.classList.remove("blast");
+
+        setTimeout(() => {
+          document.getElementById("loader").style.display = "none";
+          document.getElementById("main-content").style.display = "block";
+          document.body.style.overflow = "auto";
+
+          // Redirect to home.html after the animation
+          setTimeout(() => {
+            window.location.href = "home.html"; // This will redirect to home.html
+          }, 800); // Adjust the time to match your transition
+        }, 800);
+      }, 500);
+    }
+
+    typeNextChar();
+  });
+</script>
+</body>
+</html>
