@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+
 //photoshoot
 const photos = document.querySelectorAll('.photo-container img');
 
@@ -57,6 +58,8 @@ function applySeasonalEffect() {
   // Valentine's Special
   const today = new Date().getDate();
   if (month === 1 && today >= 7 && today <= 14) emoji = "❤️";
+
+   
   
   // Create multiple falling elements
   for (let i = 0; i < 20; i++) {
